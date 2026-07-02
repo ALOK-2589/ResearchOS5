@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html.light {
+  color-scheme: light;
+}
+
+html.light body,
+html.light .app-surface {
+  background: #fafafa !important;
+  color: #18181b !important;
+}
+
+html.light .global-navbar {
+  border-color: rgb(228 228 231 / 0.9) !important;
+  background: rgb(255 255 255 / 0.86) !important;
+  color: #18181b !important;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.06);
+}
+
+html.light .global-navbar [class*="bg-zinc-9"],
+html.light .app-surface [class*="bg-zinc-9"] {
+  background-color: rgb(255 255 255 / 0.88) !important;
+}
+
+html.light .global-navbar [class*="border-zinc-8"],
+html.light .app-surface [class*="border-zinc-8"] {
+  border-color: #e4e4e7 !important;
+}
+
+html.light .global-navbar [class*="text-zinc-1"],
+html.light .global-navbar .text-white,
+html.light .app-surface [class*="text-zinc-1"],
+html.light .app-surface [class*="text-zinc-2"],
+html.light .app-surface .text-white {
+  color: #18181b !important;
+}
+
+html.light .global-navbar [class*="text-zinc-4"],
+html.light .global-navbar [class*="text-zinc-5"],
+html.light .app-surface [class*="text-zinc-3"],
+html.light .app-surface [class*="text-zinc-4"],
+html.light .app-surface [class*="text-zinc-5"] {
+  color: #52525b !important;
+}
